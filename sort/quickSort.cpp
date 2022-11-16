@@ -30,7 +30,7 @@ void quick_sort(int q[],int l,int r) {
                 quick_sort(q,l,i-1);
                 quick_sort(q,i,r);   用i分界，分界点x不能取左边界即q[l];
                 
-                否则会陷入死循环，例q=[1,2]
+                否则会陷入死循环，例q=[1,2]。
     */
     
 }
