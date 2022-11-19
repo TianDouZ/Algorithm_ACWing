@@ -3,9 +3,9 @@
 
 using namespace std;
 
-const int N=1e6+10;  //+10是为了防止边界问题
+//const int N=1e6+10;  //+10是为了防止边界问题
 
-//C=A+B
+//C=A+B  大整数加法
 vector<int> add(vector<int> &A,vector<int> &B) { //加引用&是为了提高效率，不加&要把原来的数组copy一遍
     vector<int> C;
     
@@ -16,6 +16,18 @@ vector<int> add(vector<int> &A,vector<int> &B) { //加引用&是为了提高效�
         C.push_back(t%10);  //当前这一位
         t/=10;   //进位
     }
+
+    /*
+        if(A.size()<B.size()) return add(B,A);
+
+        int t=0; //进位
+        for(int i=0;i<A.size();i++) {
+            t+=A[i];
+            if(i<B.size()) t+=B[i];
+            C.push_back(t%10);  //当前这一位
+            t/=10;   //进位
+        }
+    */
     
     if(t) C.push_back(1); //判断最高位是否有进位，如果有进1
     return C;
