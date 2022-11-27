@@ -25,13 +25,20 @@ void quick_sort(int q[],int l,int r) {
 
     /*
         边界问题：
-                quick_sort(q,l,j);
-                quick_sort(q,j+1,r);   用j分界，分界点x不能取右边界即q[r];
+                1.边界点不要取两端，因为容易超时。
 
-                quick_sort(q,l,i-1);
-                quick_sort(q,i,r);   用i分界，分界点x不能取左边界即q[l];
+                2.用j分界，分界点x不能取右边界即q[r];
+                  quick_sort(q,l,j);
+                  quick_sort(q,j+1,r);   
+
+                3.用i分界，分界点x不能取左边界即q[l];
+                  分界点如果用mid，mid=(l+r+1)>>2,因为会向下取整；
+                  quick_sort(q,l,i-1);
+                  quick_sort(q,i,r);   
                 
-                否则会陷入死循环，例q=[1,2]。
+                  否则会陷入死循环，例q=[1,2]。
+
+                4.分界点可以用随机数随机数q[rand()%(r-l+1)+l]。
     */
     
 }
