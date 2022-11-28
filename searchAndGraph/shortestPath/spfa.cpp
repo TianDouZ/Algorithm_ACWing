@@ -5,9 +5,6 @@
 
 using namespace std;
 
-
-typedef pair<int,int> PII;  //堆里面存的是pair，维护距离需要知道节点编号
-
 const int N=150010;
 
 int n,m;
