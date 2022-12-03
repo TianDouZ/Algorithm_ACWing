@@ -3,6 +3,14 @@
 
 using namespace std;
 
+/*
+    时间复杂度O(mlogm)
+        1.将所有边按照权重从小到大排序
+        2.枚举每条边ab,权重是c （用并查集）
+            if（ab不连通）
+                将这条边加入集合中
+*/
+
 const int N=200010,INF = 0x3f3f3f3f;  //N开的是边数
 
 int n,m;
