@@ -13,10 +13,10 @@ using namespace std;
 
 typedef pair<int,int> PII;  //堆里面存的是pair，维护距离需要知道节点编号
 
-const int N=150010;
+const int N=150010,M=150010;
 
 int n,m;
-int h[N],w[N],e[N],ne[N],idx;  //邻接表存稀疏图,w[N]存的是权重
+int h[N],w[M],e[M],ne[M],idx;  //邻接表存稀疏图,w[N]存的是权重
 int dist[N]; //表示每个点距离第一个点的当前最短路径
 bool st[N]; //表示每个点的最短路是否已经确定
 
