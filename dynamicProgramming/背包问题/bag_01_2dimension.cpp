@@ -1,5 +1,5 @@
 /*
-    二维表示
+    二维表示:f[i][j]=max(f[i-1][j],f[i-1][j-v[i]]+w[i]);
 */
 #include <iostream>
 #include <algorithm>
