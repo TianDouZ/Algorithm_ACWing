@@ -1,3 +1,6 @@
+/*
+    时间复杂度O(n^2);
+*/
 #include <iostream>
 #include <algorithm>
 
@@ -69,6 +72,45 @@ int main() {
         printf("%d ",a[k]);
         k=g[k];
     }
+    
+    return 0;
+}
+
+/*
+    二分法优化， 时间复杂度O(nlogn);
+*/
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+const int N=100010;
+
+int n;
+int a[N];
+int q[N];  //用来储存不同长度的上升子序列的最后一个数的最小值
+
+int main() {
+    scanf("%d",&n);
+    for(int i=0;i<n;i++) scanf("%d",&a[i]);
+    
+    int len=0; //存的是最大长度，q里面的元素个数，最开始是0
+    
+    //二分找小于某个数的最大的数
+    q[0]=-2e9;  
+    //为了保证每个数都有比它小的数，把q[0]当成哨兵，初始化比任意数字都小为-2e9
+    for(int i=0;i<n;i++) {
+        int l=0,r=len;
+        while(l<r) {
+            int mid=(l+r+1)>>1;
+            if(q[mid]<a[i]) l=mid;
+            else r=mid-1;
+        }
+        len=max(len,r+1);
+        q[r+1]=a[i];
+    }
+    
+    printf("%d\n",len);
     
     return 0;
 }
