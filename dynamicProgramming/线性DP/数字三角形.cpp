@@ -3,6 +3,7 @@
 */
 #include <iostream>
 #include <algorithm>
+#include <cstring>
 
 using namespace std;
 
@@ -26,6 +27,15 @@ int main() {
             f[i][j]=-INF;
         }
     }
+    /*
+    也可以用memset，但是头文件要加上cstring
+    memset(f,-0x3f,sizeof f);
+    */
+
+   /*
+    memset 是 cstring 里的函数，用于填充 char 型数组。对于数值型数组只能初始化为 0 或 -1。
+    memset 是按字节填充
+   */
     
     f[1][1]=a[1][1];
     for(int i=2;i<=n;i++) {
