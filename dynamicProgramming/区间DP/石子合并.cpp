@@ -1,3 +1,9 @@
+/*
+    石子合并：
+    状态 O(N^2)
+    转移 枚举k O(n)
+    时间复杂度 O(N^3)
+*/
 #include <iostream>
 #include <algorithm>
 
