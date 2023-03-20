@@ -10,7 +10,7 @@ typedef long long LL;
 const int N=12,M=1<<N;   //M=2^N  N多开一列因为最后棋盘会多处理一列
 int n,m;
 LL f[N][M];
-vector<int> state[M];   
+vector<int> state[M];   // vector<int> v[n]:表示n个vector v ，二维数组
 //vector存的是所有合法状态，对遂于每个状态而言是一个数组，所有能转移到它的合法状态有哪些，预处理一下
 bool st[M];  //判断当前列是否能用1x2的小方格填满，即当前列所有连续空着的小方格是否均为偶数
 
