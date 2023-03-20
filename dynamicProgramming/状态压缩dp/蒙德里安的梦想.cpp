@@ -1,3 +1,7 @@
+/*
+    时间复杂度O（11x2^11 x 2^11）
+                状态数     转移数，计算每个状态要枚举2^11
+*/
 #include <cstring>
 #include <iostream>
 #include <algorithm>
