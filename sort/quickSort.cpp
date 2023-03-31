@@ -11,7 +11,7 @@ int q[N];
 void quick_sort(int q[],int l,int r) {
     if(l>=r) return; //边界，只有一个数或没有数直接return 
 
-    int x=q[(l+r)/2],i=l-1,j=r+1; //l r分别指向边界左右两次，这样每次都先把l r往中间移动一位
+    int x=q[(l+r)/2],i=l-1,j=r+1; //l r分别指向边界左右两边，这样每次都先把l r往中间移动一位
     //注意数据量多的时候，分界点x应随机取或取中间点，否则会超时
     while (i<j)
     {
