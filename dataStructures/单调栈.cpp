@@ -1,3 +1,7 @@
+/*
+    时间复杂度：
+        O(n) 每个元素最多只会进栈、出栈一次
+*/
 #include <iostream>
 
 using namespace std;
@@ -17,7 +21,7 @@ int main() {
     for(int i=0;i<n;i++) {
         int x;
         scanf("%d",&x);
-        while(tt&&stk[tt]>=x) tt--;
+        while(tt&&stk[tt]>=x) tt--;  
         if(tt) printf("%d ",stk[tt]);
         else printf("-1 ");
         
