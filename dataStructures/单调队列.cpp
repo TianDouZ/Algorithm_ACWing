@@ -1,4 +1,4 @@
-#include <iostream>
+ #include <iostream>
 
 using namespace std;
 
@@ -17,7 +17,7 @@ int main() {
     for(int i=0;i<n;i++) {
         //判断队头是否已经滑出窗口
         if(hh<=tt&&i-k+1>q[hh]) hh++;  //写if就行，因为窗口每次只移动一位，最多只有一个数不在窗口内
-        while(hh<=tt&&a[q[tt]]>=a[i]) tt--;
+        while(hh<=tt&&a[q[tt]]>=a[i]) tt--;  //当前值a[i]比队尾的值小，队尾的值没用了，直接出队。
         
         q[++tt]=i;
         if(i>=k-1) printf("%d ",a[q[hh]]);
