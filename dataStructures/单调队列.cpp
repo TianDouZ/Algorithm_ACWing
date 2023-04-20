@@ -19,7 +19,7 @@ int main() {
         if(hh<=tt&&i-k+1>q[hh]) hh++;  //写if就行，因为窗口每次只移动一位，最多只有一个数不在窗口内
         while(hh<=tt&&a[q[tt]]>=a[i]) tt--;  //当前值a[i]比队尾的值小，队尾的值没用了，直接出队。
         
-        q[++tt]=i;
+        q[++tt]=i;  //把当前的数插入到队列中
         if(i>=k-1) printf("%d ",a[q[hh]]);
         
     }
@@ -32,7 +32,7 @@ int main() {
         if(hh<=tt&&i-k+1>q[hh]) hh++;  //写if就行，因为窗口每次只移动一位，最多只有一个数不在窗口内
         while(hh<=tt&&a[q[tt]]<=a[i]) tt--;
         
-        q[++tt]=i;
+        q[++tt]=i;  
         if(i>=k-1) printf("%d ",a[q[hh]]);
         
     }
